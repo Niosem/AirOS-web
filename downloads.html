@@ -44,13 +44,36 @@
             color: white;
         }
     </style>
+    <style>
+        #outer
+            {
+                width:100%;
+                text-align: center;
+            }
+        .inner
+            {
+                display: inline-block;
+            }
+    </style>
+    <script type="text/javascript">
+        function showMessage64() {
+            alert("x64: Coming Soon");
+        }
+        function showMessageArm() {
+            alert("arm64: Coming Soon");
+        }
+    </script>
 </head>
 <body>
     <div class="hero-image">
         <div class="hero-text">
             <h1 style="font-size:50px">This Is AirOS</h1>
             <p>A Linux Distro, based on nothing, with expendability in mind</p>
-            <button>Get it going</button>
+            <div id="outer">
+                <div class="inner"><button onclick="location.href = 'www.github.com/Niosem/AirOS/releases';" id="sourceDownloadBtn">Source Code</button></div>
+                <div class="inner"><button onClick="showMessage64()">Download for x64</button></div>
+                <div class="inner"><button onClick="showMessageArm()">Download for arm64</button></div>
+              </div>
         </div>
     </div>
 </body>
